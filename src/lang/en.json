@@ -1,1 +1,13 @@
-{}
+{
+  "pf2eSth": {
+    "held1": "Held 1H",
+    "held2": "Held 2H",
+    "wornArmor": "Worn (Armor)",
+    "carried": "Carried",
+    "dropped": "Dropped",
+    "equipDialog": {
+      "title": "Send {name} to Hand",
+      "selectLabel": "Equipped:"
+    }
+  }
+}

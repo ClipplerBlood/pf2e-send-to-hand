@@ -1,0 +1,21 @@
+<form autocomplete="off">
+  <div class="form-group">
+    <label>{{localize "pf2eSth.equipDialog.selectLabel"}}</label>
+    <div class="form-fields">
+      <select name="equipStatus">
+        {{#select equipStatus}}
+          {{log this}}
+          {{#unless isArmor}}
+            <option value="held1">{{localize "pf2eSth.held1"}}</option>
+          {{/unless}}
+          <option value="held2">{{localize "pf2eSth.held2"}}</option>
+          {{#if isArmor}}
+            <option value="wornArmor">{{localize "pf2eSth.wornArmor"}}</option>
+          {{/if}}
+          <option value="carried">{{localize "pf2eSth.carried"}}</option>
+          <option value="dropped">{{localize "pf2eSth.dropped"}}</option>
+        {{/select}}
+      </select>
+    </div>
+  </div>
+</form>

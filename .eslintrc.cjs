@@ -5,13 +5,16 @@
 
 module.exports = {
   parserOptions: {
-    ecmaVersion: 2020,
+    ecmaVersion: 13,
     extraFileExtensions: ['.cjs', '.mjs'],
     sourceType: 'module',
   },
 
   env: {
     browser: true,
+    commonjs: true,
+    es2022: true,
+    jquery: true,
   },
 
   extends: ['eslint:recommended', '@typhonjs-fvtt/eslint-config-foundry.js/0.8.0', 'plugin:prettier/recommended'],
@@ -20,6 +23,16 @@ module.exports = {
 
   rules: {
     // Specify any specific ESLint rules.
+    'no-unused-vars': [
+      'error',
+      { vars: 'local', args: 'after-used', ignoreRestSiblings: false, argsIgnorePattern: '^_' },
+    ],
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
+    ],
   },
 
   overrides: [
