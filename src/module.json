@@ -1,19 +1,22 @@
 {
   "id": "pf2e-send-to-hand",
-  "title": "<human readable title for pf2e-send-to-hand>",
-  "description": "<description of the package>",
+  "title": "PF2E Send to Hand ✋ - Inventory Item Header Management",
+  "description": "Adds to owned items sheet a way to equip or unequip them directly from the item sheet header",
   "authors": [
     {
-      "name": "<your name>",
-      "email": "<optionally your e-mail address>",
-      "discord": "<optionally your discord username>"
+      "name": "ClipplerBlood",
+      "discord": "ClipplerBlood#8146"
+    },
+    {
+      "name": "ApoApostolov",
+      "email": "theapoapostolov@gmail.com",
+      "discord": "ApoApostolov#4622"
     }
   ],
   "url": "This is auto replaced",
-  "license": "<please choose an appropriate license. https://choosealicense.com/ is a great place to get more information if you are unsure>",
-  "readme": "<optionally the URL to your readme>",
-  "bugs": "<optionally the URL to your issue list>",
-  "changelog": "<optionally the URL to your changelog>",
+  "license": "https://github.com/ClipplerBlood/pf2e-send-to-hand/blob/master/LICENSE",
+  "readme": "https://github.com/ClipplerBlood/pf2e-send-to-hand/blob/master/README.md",
+  "bugs": "https://github.com/ClipplerBlood/pf2e-send-to-hand/issues",
   "version": "This is auto replaced",
   "compatibility": {
     "minimum": "10",
