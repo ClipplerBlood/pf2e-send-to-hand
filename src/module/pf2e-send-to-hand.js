@@ -53,7 +53,7 @@ function refreshHeader(app) {
  * @param {MouseEvent} _ev
  * @return {Promise<void>}
  */
-async function openHandSelectionDialog(item, _ev) {
+async function openHandSelectionDialog(item, _ev = undefined) {
   const template = 'modules/pf2e-send-to-hand/templates/equip-selector-dialog.html';
   const templateData = {
     item: item,
@@ -85,3 +85,8 @@ async function openHandSelectionDialog(item, _ev) {
 
   dialog.render(true);
 }
+
+Hooks.on('openPf2eSendToHandDialog', (item) => {
+  if (!(item.parent instanceof Actor && item.isOwner)) return;
+  return openHandSelectionDialog(item);
+});
