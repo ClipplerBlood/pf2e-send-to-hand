@@ -34,11 +34,9 @@ Hooks.on('getItemSheetHeaderButtons', (sheet, buttons) => {
 });
 
 Hooks.on('updateItem', (item, updateData, _options, _userId) => {
-  // When an item updates its carry state, refresh its open windows header buttons
+  // When an item updates its carry state, refresh its open window header buttons
   if (updateData?.system?.equipped == null) return;
-  Object.values(ui.windows)
-    .filter((app) => app.document?.id === item.id)
-    .forEach(refreshHeader);
+  if (item.sheet) refreshHeader(item.sheet);
 });
 
 function refreshHeader(app) {
