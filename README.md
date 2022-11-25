@@ -4,7 +4,9 @@
 This mod adds to item dialogs of items that are in the player inventory a way to equip or unequip them from the item dialog header. This method allows TAH to open items with right-click and then change their state from the item dialog.
 
 - This mod only works for item dialogs of items that are in the inventory of tokens you are owner, or all for the GM.
-- The mod adds a new button in the item header, an icon and a string, depending if the item is equipped or not. Pressing the header button changes the state of the item’s equipment.
+- The mod adds a new button in the item header, an icon and a string, depending on if the item is equipped or not. Pressing the header button changes the state of the item’s equipment.
+- If used with Token Action Hud, middle-clicking on an item opens up the equip status selection dialog.
+
 ## Licensing
 
 This project is being developed under the terms of the

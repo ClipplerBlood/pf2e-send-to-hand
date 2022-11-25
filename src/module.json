@@ -1,7 +1,7 @@
 {
   "id": "pf2e-send-to-hand",
-  "title": "PF2E Send to Hand ✋ - Inventory Item Header Management",
-  "description": "Adds to owned items sheet a way to equip or unequip them directly from the item sheet header",
+  "title": "PF2E Send to Hand ✋ - Inventory Item Management",
+  "description": "Manage owned items' equip status directly from the item sheet, or with TAH middle click.",
   "authors": [
     {
       "name": "ClipplerBlood",
@@ -34,7 +34,16 @@
     }
   ],
   "relationships": {
-    "systems": [],
+    "systems": [
+      {
+        "id": "pf2e",
+        "type": "system",
+        "compatibility": {
+          "minimum": "4.0.0",
+          "verified": "4.4.0"
+        }
+      }
+    ],
     "requires": [],
     "conflicts": []
   },

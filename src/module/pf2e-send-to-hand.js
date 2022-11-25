@@ -41,8 +41,8 @@ Hooks.on('updateItem', (item, updateData, _options, _userId) => {
 
 function refreshHeader(app) {
   let header = app.element.find('.header-button.pf2e-send-to-hand');
+  header = header?.get(0);
   if (!header) return;
-  header = header.get(0);
   const equipStatus = getItemEquipStatus(app.document);
   header.innerHTML = getEquipStatusHeaderButton(equipStatus);
 }
@@ -89,4 +89,25 @@ async function openHandSelectionDialog(item, _ev = undefined) {
 Hooks.on('openPf2eSendToHandDialog', (item) => {
   if (!(item.parent instanceof Actor && item.isOwner)) return;
   return openHandSelectionDialog(item);
+});
+
+Hooks.on('renderTokenActionHUD', (_app, element, _data) => {
+  element.find('#tah-category-items button[value^="item|"]').each((_, button) => {
+    // Grab data from html
+    const value = button.getAttribute('value');
+    const split = value.split('|');
+    const tokenId = split[1];
+    const itemId = split[2];
+    if (!tokenId || !itemId) return;
+
+    // Get actor and item
+    const actor = game.scenes.current.tokens.get(tokenId)?.actor;
+    const item = actor?.items.get(itemId);
+    if (!actor || !item) return;
+
+    // Add the event listener
+    button.addEventListener('auxclick', (ev) => {
+      if (ev.button === 1) return openHandSelectionDialog(item);
+    });
+  });
 });
