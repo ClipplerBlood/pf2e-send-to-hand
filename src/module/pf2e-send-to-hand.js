@@ -4,7 +4,7 @@ import {
   getEquipStatusHeaderButton,
   getItemEquipStatus,
   setItemEquipStatus,
-} from '../templates/equip-utils.js';
+} from './equip-utils.js';
 
 // Initialize module
 Hooks.once('init', async () => {
